@@ -61,29 +61,8 @@
   <div class="title">
     <h1>OLPH Track &amp; Field</h1>
     <div class="sub">K-1 Meet Day Plan · District 1 Championship · Saturday May 2, 2026 · 11:00 AM</div>
-    <div class="sub" id="weather" style="margin-top:4px;">⛅ Loading weather…</div>
   </div>
 </div>
-<script>
-(function(){
-  fetch('https://wttr.in/Bethlehem,PA?format=3')
-    .then(function(r){ return r.text(); })
-    .then(function(t){
-      var el = document.getElementById('weather');
-      if (!el) return;
-      t = (t || '').trim().replace(/^[^:]+:\s*/, '');
-      if (t && t.length < 80 && !t.startsWith('<')) {
-        el.textContent = '🌤  Bethlehem: ' + t;
-      } else {
-        el.textContent = '';
-      }
-    })
-    .catch(function(){
-      var el = document.getElementById('weather');
-      if (el) el.textContent = '';
-    });
-})();
-</script>
 
 <div class="quickstart">
 <div class="qs-title">📋 Parents · Quick Start</div>
