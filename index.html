@@ -66,11 +66,17 @@
 </div>
 <script>
 (function(){
-  fetch('https://wttr.in/Bethlehem,PA?format=%C+%t+%26+%p+rain')
+  fetch('https://wttr.in/Bethlehem,PA?format=3')
     .then(function(r){ return r.text(); })
     .then(function(t){
       var el = document.getElementById('weather');
-      if (el && t && t.length < 80) el.textContent = '☀️ Bethlehem now: ' + t.trim();
+      if (!el) return;
+      t = (t || '').trim().replace(/^[^:]+:\s*/, '');
+      if (t && t.length < 80 && !t.startsWith('<')) {
+        el.textContent = '🌤  Bethlehem: ' + t;
+      } else {
+        el.textContent = '';
+      }
     })
     .catch(function(){
       var el = document.getElementById('weather');
