@@ -27,6 +27,12 @@
   ul { margin: 0.3em 0 0.8em 1.4em; }
   li { margin-bottom: 0.3em; }
   .note { background: var(--olph-blue-tint); border-left: 4px solid var(--olph-blue); padding: 0.5em 0.8em; margin: 0.6em 0; }
+  .quickstart { background: #d9e6f6; border: 1px solid var(--olph-blue); border-radius: 8px; padding: 18px 22px 14px 22px; margin: 0.8em 0 1.2em 0; box-shadow: 0 2px 8px rgba(21,81,162,0.12); }
+  .quickstart .qs-title { margin: 0 0 12px 0; color: var(--olph-blue); font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+  .quickstart ol { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .quickstart ol li { counter-increment: step; position: relative; padding: 8px 0 8px 42px; font-size: 15px; line-height: 1.5; }
+  .quickstart ol li::before { content: counter(step); position: absolute; left: 0; top: 8px; width: 28px; height: 28px; background: var(--olph-blue); color: white; border-radius: 50%; text-align: center; font-weight: 700; line-height: 28px; font-size: 14px; }
+  .quickstart .t { color: #b45309; font-weight: 700; }
   .meta { color: var(--olph-gray); font-size: 12px; }
   hr { border: 0; border-top: 1px solid #cbd5e1; margin: 2em 0 1em 0; }
   .footer { display: flex; align-items: center; gap: 8px; color: var(--olph-gray); font-size: 12px; }
@@ -52,12 +58,13 @@
   </div>
 </div>
 
-<h2>Note for Parents</h2>
-<div class="note">
-<strong>Drop-off:</strong> bring your kid to the location listed in their row below. Coaches will be there from 10:45 onward. <br>
-<strong>After your kid's first event, they're yours.</strong> You can take them around to other events. Just bring them back to the relay area by ~12:50 if they're on a relay team.<br>
-<strong>If your kid has Long Jump,</strong> drop them at the LJ line first thing. Tiffany or Diana will be there holding spots.<br>
-<strong>If your kid is starting at a track event (sprint),</strong> just head straight there.
+<div class="quickstart">
+<div class="qs-title">📋 Parents · Quick Start</div>
+<ol>
+<li><strong>Find your kid's row below</strong> to see where they start and which coach is meeting them.</li>
+<li><strong>Drop them off by <span class="t">10:45 AM</span>.</strong> If they have Long Jump, head straight to the LJ line — Tiffany or Diana will be holding spots.</li>
+<li><strong>After their first event, they're yours.</strong> Bring them back to the relay area by <span class="t">~12:50 PM</span> if they're on a relay team.</li>
+</ol>
 </div>
 
 <h2>Where Each Kid Goes First (Drop-Off Chart)</h2>
